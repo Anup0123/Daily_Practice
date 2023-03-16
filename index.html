@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>JavaScript Basic</h1>
+    <p id="para">Changing paragraph using JavaScript</p>
+    <button type="button" onclick="change()">Click</button>
+    <p>Never call document.write after the document has finished loading.
+        It will overwrite the whole document.</p>
+        <button type="button" onclick="document.write(5 + 6)">Try it</button><br>
+        <button onclick="window.print()">Click to print</button>
+        <script>
+            function change(){
+                document.getElementById('para').innerHTML="inner HTML Over write the content written in<p."
+                // decalring variable x to indicate para
+                let x=document.getElementById('para'); 
+                x.style.color='red';
+            }
+            document.write(5 + 6);
+            // window.alert('Hello world');
+            // information will shown in console of browser;
+            console.log('Hello World');
+        </script>
+       
+</body>
+</html>

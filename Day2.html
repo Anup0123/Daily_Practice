@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basic</title>
+</head>
+<body>
+    <h2>Day of Practice of JavaScript</h2>
+    <p id="para"></p>
+    <h2>JavaScript HTML Events</h2>
+    <!-- The onchange event is often used in combination with validation of input fields. -->
+Enter your name: <input type="text" id="fname" onchange="upperCase()">
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+<div id="mouse" onmouseover="mOver()" onmouseout="mOut()" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
+
+<!-- Event listerner example -->
+<p>This example uses the addEventListener() method to execute a function when a user clicks on a button.</p>
+
+<button id="myBtn">Try it</button>
+
+<h4>Another event listerner example</h4>
+<button id="butn">Click Me</button>
+<p id="para1"></p>
+<script>
+document.getElementById("para").innerHTML ="This example changes the content (the innerHTML) of the <p> element with id para" ;
+
+
+function upperCase() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+function mOver() {
+    let y=document.getElementById('mouse');
+    y.innerHTML="mouse is over div";
+}
+
+function mOut() {
+    let a=document.getElementById('mouse');
+    a.innerHTML="mouse is out of div";
+}
+// Event listener
+document.getElementById("myBtn").addEventListener("click", myFunction);
+
+function myFunction() {
+  alert ("Hello World!");
+}
+
+document.getElementById('butn').addEventListener('click',date);
+function date(){
+    document.getElementById('para1').innerHTML=Date();
+}
+
+</script>
+</body>
+</html>

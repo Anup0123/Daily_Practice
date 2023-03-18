@@ -25,35 +25,6 @@ Mouse Over Me</div>
 <h4>Another event listerner example</h4>
 <button id="butn">Click Me</button>
 <p id="para1"></p>
-<script>
-document.getElementById("para").innerHTML ="This example changes the content (the innerHTML) of the <p> element with id para" ;
-
-
-function upperCase() {
-  const x = document.getElementById("fname");
-  x.value = x.value.toUpperCase();
-}
-function mOver() {
-    let y=document.getElementById('mouse');
-    y.innerHTML="mouse is over div";
-}
-
-function mOut() {
-    let a=document.getElementById('mouse');
-    a.innerHTML="mouse is out of div";
-}
-// Event listener
-document.getElementById("myBtn").addEventListener("click", myFunction);
-
-function myFunction() {
-  alert ("Hello World!");
-}
-
-document.getElementById('butn').addEventListener('click',date);
-function date(){
-    document.getElementById('para1').innerHTML=Date();
-}
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>
